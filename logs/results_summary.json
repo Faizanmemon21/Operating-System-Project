@@ -1,0 +1,193 @@
+{
+  "memory_management": {
+    "FIFO": {
+      "algorithm": "FIFO",
+      "num_frames": 4,
+      "total_accesses": 20,
+      "page_faults": 16,
+      "page_hits": 4,
+      "fault_rate_percent": 80.0,
+      "memory_utilization_percent": 100.0
+    },
+    "LRU": {
+      "algorithm": "LRU",
+      "num_frames": 4,
+      "total_accesses": 20,
+      "page_faults": 14,
+      "page_hits": 6,
+      "fault_rate_percent": 70.0,
+      "memory_utilization_percent": 100.0
+    },
+    "OPTIMAL": {
+      "algorithm": "OPTIMAL",
+      "num_frames": 4,
+      "total_accesses": 20,
+      "page_faults": 9,
+      "page_hits": 11,
+      "fault_rate_percent": 45.0,
+      "memory_utilization_percent": 100.0
+    }
+  },
+  "file_system": {
+    "disk_usage": {
+      "total_blocks": 2048,
+      "used_blocks": 4,
+      "free_blocks": 2044,
+      "utilization_percent": 0.2
+    },
+    "violations_in_fs_module": [
+      "Role 'Student' does not have delete permission on 'syllabus.pdf'.",
+      "Role 'Guest' does not have write permission on 'notice.txt'.",
+      "Role 'Guest' does not have delete permission on 'notice.txt'."
+    ],
+    "directory_tree": {
+      "Labs": {
+        "CS101": [
+          "assignment1.txt",
+          "syllabus.pdf"
+        ],
+        "CS102": [
+          "lab_manual.txt"
+        ]
+      },
+      "Shared": [
+        "notice.txt"
+      ]
+    }
+  },
+  "disk_scheduling": {
+    "FCFS": {
+      "algorithm": "FCFS",
+      "service_order": [
+        6,
+        28,
+        35,
+        57,
+        62,
+        70,
+        163,
+        189
+      ],
+      "total_head_movement": 230,
+      "average_seek_time": 28.75,
+      "num_requests": 8
+    },
+    "SSTF": {
+      "algorithm": "SSTF",
+      "service_order": [
+        57,
+        62,
+        70,
+        35,
+        28,
+        6,
+        163,
+        189
+      ],
+      "total_head_movement": 264,
+      "average_seek_time": 33.0,
+      "num_requests": 8
+    },
+    "SCAN": {
+      "algorithm": "SCAN",
+      "service_order": [
+        57,
+        62,
+        70,
+        163,
+        189,
+        199,
+        35,
+        28,
+        6
+      ],
+      "total_head_movement": 339,
+      "average_seek_time": 42.38,
+      "num_requests": 8
+    },
+    "C-SCAN": {
+      "algorithm": "C-SCAN",
+      "service_order": [
+        57,
+        62,
+        70,
+        163,
+        189,
+        199,
+        0,
+        6,
+        28,
+        35
+      ],
+      "total_head_movement": 380,
+      "average_seek_time": 47.5,
+      "num_requests": 8
+    },
+    "LOOK": {
+      "algorithm": "LOOK",
+      "service_order": [
+        57,
+        62,
+        70,
+        163,
+        189,
+        35,
+        28,
+        6
+      ],
+      "total_head_movement": 319,
+      "average_seek_time": 39.88,
+      "num_requests": 8
+    },
+    "C-LOOK": {
+      "algorithm": "C-LOOK",
+      "service_order": [
+        57,
+        62,
+        70,
+        163,
+        189,
+        6,
+        28,
+        35
+      ],
+      "total_head_movement": 348,
+      "average_seek_time": 43.5,
+      "num_requests": 8
+    }
+  },
+  "security": {
+    "stats": {
+      "total_access_attempts": 12,
+      "granted": 9,
+      "denied_violations": 3,
+      "violation_rate_percent": 25.0
+    },
+    "violations": [
+      {
+        "timestamp": 1781886141.10236,
+        "user_id": 4,
+        "name": "Guest_Visitor_01",
+        "role": "Guest",
+        "operation": "delete",
+        "allowed": false
+      },
+      {
+        "timestamp": 1781886141.102392,
+        "user_id": 4,
+        "name": "Guest_Visitor_01",
+        "role": "Guest",
+        "operation": "write",
+        "allowed": false
+      },
+      {
+        "timestamp": 1781886141.1024203,
+        "user_id": 2,
+        "name": "Ali Raza",
+        "role": "Student",
+        "operation": "delete",
+        "allowed": false
+      }
+    ]
+  }
+}
